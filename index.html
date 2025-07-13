@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmad Affan – Web Developer</title>
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:sans-serif; background:#f4f4f5; color:#1f2937; line-height:1.6; transition:.3s; }
+    img { max-width:100%; display:block; }
+    a { color:inherit; text-decoration:none; }
+
+    header { padding:2.5rem 1rem; text-align:center; }
+    .container { max-width:960px; margin:auto; padding:0 1rem; }
+    h1 { font-size:2.25rem; margin-bottom:.5rem; }
+    h2 { font-size:1.5rem; margin:2.5rem 0 1rem; text-align:center; position:relative; }
+    h2::after { content:""; width:60px; height:3px; background:#6366f1; position:absolute; left:50%; transform:translateX(-50%); bottom:-8px; border-radius:2px; }
+    .grid { display:grid; gap:1.25rem; }
+    .grid-2 { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+    section { padding:1rem 0 2rem; }
+    footer { background:#1f2937; color:#f3f4f6; text-align:center; padding:1.5rem 1rem; }
+
+    .card { background:#fff; border-radius:12px; padding:1.5rem; box-shadow:0 4px 8px rgba(0,0,0,.05); }
+    .skill-badge { display:inline-block; background:#e0e7ff; color:#4338ca; padding:.25rem .5rem; margin:.25rem; border-radius:6px; font-size:.875rem; }
+
+    body.dark { background:#111827; color:#e5e7eb; }
+    body.dark footer{ background:#0f172a; }
+    body.dark .card { background:#1e293b; }
+    body.dark h2::after{ background:#8b5cf6; }
+    .dark-toggle {
+      position:fixed; right:1rem; bottom:1rem; background:#6366f1;
+      border:none; border-radius:50%; width:48px; height:48px;
+      color:#fff; font-size:1.25rem; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,.25);
+    }
+
+    input, textarea {
+      width:100%; padding:.5rem; border:1px solid #ccc; border-radius:6px; font-size:1rem;
+    }
+    button[type="submit"] {
+      background:#6366f1; color:white; border:none; padding:.75rem; border-radius:8px; cursor:pointer; font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ahmad Affan Imanullah</h1>
+    <p>Junior Web Developer • SMK RPL Graduate</p>
+  </header>
+
+  <main class="container">
+
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <p style="text-align:center; max-width:640px; margin:auto">
+        Saya lulusan SMK RPL yang siap membantu membuat website sederhana, landing page, atau blog dengan cepat dan harga terjangkau.
+        Meski masih belajar, saya semangat untuk belajar cepat dan bekerja profesional.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Layanan</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Website Profil Usaha</h3><p>Bangun situs profil untuk UMKM, jasa, atau toko.</p></div>
+        <div class="card"><h3>Landing Page Produk</h3><p>Halaman promosi satu layar yang simpel dan efektif.</p></div>
+        <div class="card"><h3>Setup WordPress</h3><p>Instalasi dan setting awal WordPress + plugin penting.</p></div>
+        <div class="card"><h3>Perbaikan Website</h3><p>Perbaiki layout, error ringan, atau kecepatan loading.</p></div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skill</h2>
+      <div style="text-align:center">
+        <span class="skill-badge">HTML</span>
+        <span class="skill-badge">CSS</span>
+        <span class="skill-badge">WordPress</span>
+        <span class="skill-badge">Elementor</span>
+        <span class="skill-badge">Canva</span>
+        <span class="skill-badge">Laravel (basic)</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Proyek Contoh</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x240?text=Website+Cilok" alt="Website Cilok" />
+          <h3 style="margin-top:.75rem">Cilok Enak</h3>
+          <p>Website menu dan profil untuk penjual cilok lokal.</p>
+          <a href="#" class="skill-badge" style="background:#dbeafe; color:#2563eb">Demo</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/400x240?text=Landing+Skincare" alt="Landing Page" />
+          <h3 style="margin-top:.75rem">Glow Skincare</h3>
+          <p>Landing page promosi produk skincare dengan form WA.</p>
+          <a href="#" class="skill-badge" style="background:#dbeafe; color:#2563eb">Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Kontak Saya</h2>
+      <div class="card" style="max-width:480px; margin:auto;">
+        <form id="waForm" style="display:flex; flex-direction:column; gap:1rem;">
+          <label>Nama Anda:
+            <input type="text" id="nama" required>
+          </label>
+          <label>Pesan:
+            <textarea id="pesan" rows="4" required></textarea>
+          </label>
+          <button type="submit">Kirim ke WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Ahmad Affan. Dibuat dengan ❤ HTML + CSS.
+  </footer>
+
+  <button class="dark-toggle" onclick="document.body.classList.toggle('dark')">🌓</button>
+
+  <script>
+    document.getElementById('waForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value.trim();
+      const pesan = document.getElementById('pesan').value.trim();
+      const noWa = '6281234567890'; // GANTI INI DENGAN NOMOR WA KAMU
+      const url = `https://wa.me/${noWa}?text=Halo%20saya%20${encodeURIComponent(nama)}%0A${encodeURIComponent(pesan)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+
+</body>
+</html>
