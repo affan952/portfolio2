@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affan • Junior Web Developer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      background: #f9fafb;
+      color: #1f2937;
+      transition: 0.3s;
+      padding-bottom: 4rem;
+    }
+    header {
+      background: #4f46e5;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.25rem; }
+    p.lead { font-size: 1.2rem; opacity: 0.9; }
+
+    section { padding: 2rem 1rem; max-width: 960px; margin: auto; }
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: #6366f1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -8px;
+      border-radius: 2px;
+    }
+    .grid { display: grid; gap: 1.5rem; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+    }
+    .skill-badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 0.3rem 0.6rem;
+      margin: 0.25rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    .contact-card {
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 0.5rem 0.25rem;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .btn-whatsapp { background: #22c55e; }
+    .btn-instagram { background: #ec4899; }
+
+    footer {
+      background: #1f2937;
+      color: #f3f4f6;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ahmad Affan Imanullah</h1>
+  <p class="lead">Junior Web Developer • Lulusan SMK RPL</p>
+</header>
+
+<main>
+  <section>
+    <h2>Tentang Saya</h2>
+    <p style="text-align:center; max-width:640px; margin:auto">
+      Saya lulusan SMK Rekayasa Perangkat Lunak yang antusias membantu UKM dan profesional
+      membangun website sederhana, landing page, atau blog dengan cepat dan harga terjangkau.
+    </p>
+  </section>
+
+  <section>
+    <h2>Layanan</h2>
+    <div class="grid grid-2">
+      <div class="card"><h3>Website Profil Usaha</h3><p>Menampilkan info bisnis UKM secara online.</p></div>
+      <div class="card"><h3>Landing Page Produk</h3><p>Halaman promosi + form WhatsApp.</p></div>
+      <div class="card"><h3>Instalasi WordPress</h3><p>Pemasangan tema, plugin & keamanan dasar.</p></div>
+      <div class="card"><h3>Perbaikan Situs</h3><p>Perbaiki error kecil atau optimasi kecepatan.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skill</h2>
+    <div style="text-align:center">
+      <span class="skill-badge">HTML</span>
+      <span class="skill-badge">CSS</span>
+      <span class="skill-badge">WordPress</span>
+      <span class="skill-badge">Elementor</span>
+      <span class="skill-badge">Canva</span>
+      <span class="skill-badge">Laravel (basic)</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Proyek Contoh</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Cilok Enak</h3>
+        <p>Website profil dan menu sederhana untuk penjual cilok lokal.</p>
+      </div>
+      <div class="card">
+        <h3>Glow Skincare</h3>
+        <p>Landing page promosi skincare dengan integrasi WA order.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kontak</h2>
+    <div class="card contact-card">
+      <p>Ingin diskusi atau butuh website? Silakan hubungi saya.</p>
+      <a class="btn btn-whatsapp" href="https://wa.me/6282218917804" target="_blank">💬 WhatsApp Saya</a>
+      <a class="btn btn-instagram" href="https://instagram.com/nasi_giring" target="_blank">📷 Instagram Saya</a>
+      <p style="margin-top:1rem;"><strong>Email:</strong> affan@example.com</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Affan Web Dev • Dibuat dengan HTML & CSS
+</footer>
+
+</body>
+</html>
