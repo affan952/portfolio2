@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Pemesanan Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      padding: 2rem;
+      color: #1f2937;
+    }
+    h1 {
+      text-align: center;
+      color: #4f46e5;
+    }
+    form {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    button {
+      background: #22c55e;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background: #16a34a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Form Pemesanan Website</h1>
+  <form id="orderForm">
+    <label for="nama">Nama Lengkap</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <label for="whatsapp">Nomor WhatsApp</label>
+    <input type="text" id="whatsapp" name="whatsapp" required>
+
+    <label for="usaha">Nama Usaha</label>
+    <input type="text" id="usaha" name="usaha" required>
+
+    <label for="jenis">Jenis Website</label>
+    <select id="jenis" name="jenis">
+      <option value="Profil Usaha">Profil Usaha</option>
+      <option value="Landing Page">Landing Page</option>
+      <option value="Blog">Blog</option>
+      <option value="Lainnya">Lainnya</option>
+    </select>
+
+    <label for="pesan">Keterangan Tambahan</label>
+    <textarea id="pesan" name="pesan" rows="4"></textarea>
+
+    <button type="submit">Kirim ke WhatsApp</button>
+  </form>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value;
+      const whatsapp = document.getElementById("whatsapp").value;
+      const usaha = document.getElementById("usaha").value;
+      const jenis = document.getElementById("jenis").value;
+      const pesan = document.getElementById("pesan").value;
+
+      const text = `Halo Kak Affan, saya ingin pesan website. Berikut data saya:%0A
+Nama: ${nama}%0A
+WhatsApp: ${whatsapp}%0A
+Nama Usaha: ${usaha}%0A
+Jenis Website: ${jenis}%0A
+Keterangan: ${pesan}`;
+
+      const url = `https://wa.me/6282218917804?text=${encodeURIComponent(text)}`;
+      window.open(url, "_blank");
+    });
+  </script>
+
+</body>
+</html>
