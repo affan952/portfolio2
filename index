@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Affan</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      color: #1a202c;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Halo, saya Affan</h1>
+      <p>Web Developer | Freelancer</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#proyek">Proyek</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <section id="tentang">
+      <h2>Tentang Saya</h2>
+      <p>Saya seorang pengembang web dengan pengalaman dalam HTML, CSS, dan JavaScript. Siap membantu UMKM dan bisnis digital!</p>
+    </section>
+
+    <section id="proyek">
+      <h2>Proyek Saya</h2>
+      <ul>
+        <li><strong>Website UMKM – Cilok Kanji:</strong> Website promosi produk makanan khas Bandung. Fitur: katalog menu, testimoni, tombol WhatsApp.</li>
+        <li><strong>Landing Page – Matrix Studio:</strong> Landing page untuk jasa editing video dan konten kreator. Fitur: galeri layanan dan form pemesanan.</li>
+        <li><strong>Portofolio Affan:</strong> Portofolio pribadi menampilkan keahlian dan proyek sebagai freelancer web developer.</li>
+      </ul>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <p>Email: <a href="mailto:affanimanullah98@gmail.com">affanimanullah98@gmail.com</a></p>
+      <p>WhatsApp: 08xxxxxxx</p>
+    </section>
+
+    <footer>
+      <p>© 2025 Affan. Semua Hak Dilindungi.</p>
+    </footer>
+  </div>
+</body>
+</html>
